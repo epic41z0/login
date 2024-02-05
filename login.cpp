@@ -3,13 +3,12 @@
 #include <sstream>
 #include <iomanip>
 #include <vector>
-#include "md5.h"
 #include <openssl/md5.h>
 
 using namespace std;
 
 // Funktion för att skapa MD5-hash av en sträng
-std:: string md5(const string& input) {
+string md5(const string& input) {
     unsigned char digest[MD5_DIGEST_LENGTH];
     MD5((const unsigned char*)input.c_str(), input.length(), digest);
 
@@ -107,7 +106,6 @@ void testLogin() {
 }
 
 int main() {
-
     int choice;
     do {
         cout << "\n1. Skapa användare\n2. Test login\n0. Avsluta\nVälj: ";
