@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iomanip>
 #include <vector>
+#include "md5.h"
 #include <openssl/md5.h>
 
 using namespace std;
@@ -106,6 +107,11 @@ void testLogin() {
 }
 
 int main() {
+
+
+    string aaa= "dijovihiojeicejäpocod";
+    string bbb=md5(aaa);
+    cout << bbb << endl;
     int choice;
     do {
         cout << "\n1. Skapa användare\n2. Test login\n0. Avsluta\nVälj: ";
